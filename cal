@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>div</title>
+<style type="text/css">
+html, body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+}
+.caja1 {
+  height: 100%;
+  width: 50%;
+  background-color: #FF9;
+  float: left;
+}
+.caja2 {
+  height: 50%;
+  width: 50%;
+  background-color: #33b5e5;
+  position: absolute;
+  left: 25%;
+  top: 23%;
+}
+.caja3 {
+  height: 90%;
+  width: 50%;
+  float: left;
+  background-color: #CFC;
+}
+
+.caja4 {
+  height: 10%;
+  background-color: #FC6;
+  clear: both;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+}
+
+body {
+  font-family: 'Caesar Dressing', cursive;
+  font-size: xx-large;
+}
+</style>
+</head>
+<meta charset="utf-8">
+
+<body>
+
+<div class="caja2">
+
+
+
+                              <h2 id="h1">LUIS ERNESTO</h2>
+                              <h1 id="h1">La fecha y la hora son:</h1>
+                              <div id="fecha"></div>
+                 
+                          
+                           <script type="text/javascript">
+                               var fecha = new Date();
+                                var msj;
+
+                             if      (fecha.getHours() < 7)  { msj = "Buenas noches! bienvenido a la calculadora de LUIS ";}
+                             else if (fecha.getHours() < 12) { msj = "Buenos días! bienvenido a la calculadora de LUIS  ";}
+                                 else if (fecha.getHours() < 21) { msj = "Buenas tardes! bienvenido a la calculadora de LUIS  ";}
+                                   else   { msj = "Buenas noches";}
+
+                                    document.getElementById("h1").innerHTML    = msj;
+                                   document.getElementById("fecha").innerHTML = fecha;
+                            </script>
+                        
+
+
+
+
+<script type="text/javascript">
+  var num, acc = 0, op = "";
+
+  function mas()   { acc = num.value;  op = "+"; }
+  function menos() { acc = num.value;  op = "-"; }
+  function multiplicacion() { acc = num.value;  op = "*"; }
+  function Divicion() { acc = num.value;  op = "/"; }
+  function Elevar() { acc = num.value; op = "^"; }
+
+  function cuadrado() {
+       var num = document.getElementById("num");
+       num.value = num.value * num.value;
+      }
+            
+
+  function raizcuadrada (){
+       var num=document.getElementById("num");
+           num.value= Math.sqrt(num.value);
+       }
+         
+  function redondiar (){
+       var num=document.getElementById("num");
+           num.value= Math.floor(num.value);
+          }
+            
+             
+  function inverso(){
+      var num = document.getElementById("num");
+      num.value = 1/num.value;
+     }
+
+  function calcular() {
+    if (op === "+") {num.value = (+acc + +num.value)}
+    if (op === "-") {num.value = (+acc - +num.value)}
+    if (op === "*") {num.value = (+acc * +num.value)}
+    if (op === "/") {num.value = (+acc / +num.value)}
+    if (op === "^") { num.value = Math.pow(+acc, +num.value)}
+    
+    }
+
+  function inic ()   {num = document.getElementById("num");}
+  function vaciar () {num.value = "";}  
+</script>
+</head>
+<body 
+
+   onLoad="inic()">
+  <p>
+
+   Número:  <p>
+
+  <input type="text" size="25" id="num" onClick="vaciar()"><input type="button" class="button1" value="borrar" onclick="num.value = ''"/input><p>
+
+   <div>
+  <button onClick="mas()">+</button>
+  <button onClick="menos()">-</button>
+  <button onClick=" multiplicacion()">*</button>
+   <button onClick=" Divicion()">/</button>
+   <button onClick="calcular()">=</button>
+   </div>
+  <button onclick="inverso()"> 1/x </button>  
+  <button onclick="raizcuadrada()">√ </button>  
+  <button onclick="cuadrado()">x<sup>2</sup></button>
+  <button onclick="Elevar()">^</button>
+   <div>
+   <button onclick="redondiar()">Redondiar</button> 
+   
+</div>
+
+   <div style="padding-left: 10px;">
+            
+         <div style="padding-top:5px;padding-left: 10px;">
+            <input type="button" class="button1" value="7" onclick="num.value += '7'"></input>
+            <input type="button" class="button1" value="8" onclick="num.value += '8'"></input>
+            <input type="button" class="button1" value="9" onclick="num.value += '9'"></input>
+
+        </div>
+        <div style="padding-top:5px;padding-left: 10px;">
+            <input type="button" class="button1" value="4" onclick="num.value += '4'"></input>
+            <input type="button" class="button1" value="5" onclick="num.value += '5'"></input>
+            <input type="button" class="button1" value="6" onclick="num.value += '6'"></input>
+        
+
+        </div>
+        <div style="padding-top:5px;padding-left: 10px;">
+            <input type="button" class="button1" value="1" onclick="num.value += '1'"></input>
+            <input type="button" class="button1" value="2" onclick="num.value += '2'"></input>
+            <input type="button" class="button1" value="3" onclick="num.value += '3'"></input>
+         
+        <div style="padding-top:5px;padding-left: 10px;">
+            <input type="button" class="button1" value="0" onclick="num.value += '0'"></input>
+            <input type="button" class="button1" value="." style="font-size:15px;" onclick="num.value += '.'"></input>
+           
+        </div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+        
+
