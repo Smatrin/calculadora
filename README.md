@@ -1,1 +1,1 @@
-Módulo 5: Bucles. Arrays. Funciones como objetos. Ámbitos. Cierres. jQuery
+Módulo 6: JQuery UI. Interacción Con Usuario. Bootstrap. Diseño Adaptativo
